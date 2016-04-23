@@ -81,7 +81,7 @@
     if (!self.secondViewController) {
         return;
     }
-    NSLog(@"%f",self.scrollView.contentSize.height);
+    
     self.secondViewController.view.frame = CGRectMake(0, self.scrollView.contentSize.height, self.view.frame.size.width, self.view.frame.size.height);
     [self.scrollView addSubview:self.secondViewController.view];
 }
@@ -89,6 +89,7 @@
 - (void)pullUpRefreshDidFinish {
     [self.pullUpRefreshView stopLoading];
     NSLog(@"%f",self.scrollView.contentSize.height);
+    self.navigationItem.title = @"第二页";
     // 上拉分页动画
     [UIView animateWithDuration:0.5 animations:^{
         self.scrollView.contentInset = UIEdgeInsetsMake(-self.scrollView.contentSize.height, 0, 0, 0);
@@ -103,6 +104,7 @@
 }
 
 - (void)pullDownRefreshDidFinish {
+    self.navigationItem.title = @"第一页";
     [UIView animateWithDuration:0.3 animations:^{
         self.scrollView.contentInset = UIEdgeInsetsMake(_contentInsetTop, 0, 0, 0);
         // maintable重绘之后，contentsize要重新加上offset
