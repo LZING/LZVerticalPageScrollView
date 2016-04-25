@@ -1,2 +1,4 @@
 # LZVerticalPageScrollView
 离职也有个吧星期了,闲着无聊,把之前做的app的电商scrollView抽取成框架,一个用于电商加载垂直分页效果的scrollView
+离职也有个吧星期了,闲着无聊,把之前做的app的电商scrollView抽取成框架,一个用于电商加载垂直分页效果的scrollView
+离职也有个吧星期了,闲着无聊,把之前做的app的电商scrollView抽取成框架,一个用于电商加载垂直分页效果的scrollView
